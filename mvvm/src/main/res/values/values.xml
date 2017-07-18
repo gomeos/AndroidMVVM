@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemizedView">
+        <attr name="items" format="string" />
+        <attr name="itemViewFactory" format="string" />
+    </declare-styleable>
+    <declare-styleable name="DataBindingRecyclerView">
+        <attr name="looped" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ImageGestureView">
+        <attr name="imageLoadCommand" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="DataBindingView">
+        <attr name="onLongClick" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CompoundButton">
+        <attr name="onCheckedChange" format="reference" />
+    </declare-styleable>
+</resources>

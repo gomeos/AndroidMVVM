@@ -1,0 +1,76 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        warning 'InvalidPackage'
+        abortOnError false
+    }
+
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "logger_debug", "false"
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig null
+        }
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "logger_debug", "true"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig null
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile rootProject.ext.dependencies["appcompat"]
+    compile rootProject.ext.dependencies["recyclerview"]
+    compile rootProject.ext.dependencies["eventbus"]
+    compile rootProject.ext.dependencies["adapter-rxjava"]
+    compile rootProject.ext.dependencies["logging-interceptor"]
+    compile rootProject.ext.dependencies["logger"]
+
+    compile 'com.gomeos.activitystarter:activitystarter:1.0.0'
+
+    testCompile rootProject.ext.dependencies["assertj-core"]
+    testCompile rootProject.ext.dependencies["robolectric"]
+    testCompile rootProject.ext.dependencies["junit"]
+    testCompile rootProject.ext.dependencies["mockito"]
+    testCompile rootProject.ext.dependencies["hamcrest"]
+    testCompile rootProject.ext.dependencies["runner"]
+    testCompile rootProject.ext.dependencies["rules"]
+}
+
+
+apply from: '../bintrayUpload.gradle'

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="200dip"
+        android:layout_height="50dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawablePadding="4dip"
+        android:gravity="center"
+        android:text="操作"
+        android:textSize="16sp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_button_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="15sp"
+
+            />
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#FF7428"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

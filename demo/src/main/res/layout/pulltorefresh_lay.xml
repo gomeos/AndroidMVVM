@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.mx.demo.viewmodel.MyViewModel" />
+
+        <import type="com.gomeos.mvvm.view.LayoutManagers" />
+        <import type="com.mx.demo.view.factory.MyGridItemViewFactory" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 当需要使用bind方式对控件操作的话可以对控件继承后，在内部根据data binding的相关方法进行定义-->
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            binding:onRefreshListener="@{model.refreshListener}"
+            binding:Refreshing="@{model.refreshing}">
+        <com.mx.demo.view.DataBindingRecyclerView
+            android:id="@+id/vertical_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            binding:itemViewFactory="@{MyGridItemViewFactory.className}"
+            binding:items="@{model.items}"
+            binding:layoutManager="@{LayoutManagers.grid(2)}" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+
+</layout>

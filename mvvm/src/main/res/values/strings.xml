@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">mvvm</string>
+    <string name="activity_msg"> activity RunState!=CreatedState,super.onCreate()未提前调用</string>
+    <string name="fragment_msg"> fragment RunState!=CreatedState,super.onViewCreated()未提前调用</string>
+    <integer name="databinding_factory_key">-1</integer>
+
+</resources>
