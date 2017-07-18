@@ -3,6 +3,8 @@ GomeOS MVVM是一个基于MVVM思想架构，结合google databingding技术来�
 框架简化开发者adapter与recyclerview的数据繁琐创建，无需开发adapter，只需对列表中视图和数据进行绑定即可，大大提升开发效率。
 ## 框架设计
 
+![模块关系](https://github.com/gomeos/AndroidMVVM/blob/master/img/mvvm.png)</br>
+
 
 ## 模块介绍
 ### ViewModel生命周期与Activity保持一致
