@@ -6,9 +6,12 @@ import com.gomeos.mvvm.view.factory.ItemViewFactory;
 import com.gomeos.mvvm.viewmodel.AbsItemViewModel;
 import com.mx.demo.R;
 import com.mx.demo.databinding.MyGridListitemBinding;
+import com.mx.demo.databinding.MyGridTextListitemBinding;
 import com.mx.demo.viewmodel.MyItemViewModel;
+import com.mx.demo.viewmodel.MyTextItemViewModel;
 import com.mx.demo.viewmodel.viewbean.ItemViewBean;
 import com.mx.demo.viewmodel.viewbean.MyItemViewBean;
+import com.mx.demo.viewmodel.viewbean.MyTextItemViewBean;
 
 /**
  * Created by zhulianggang on 2017/7/14.
@@ -28,6 +31,11 @@ public class MyGridItemViewFactory extends ItemViewFactory<ItemViewBean> {
             binding.setModel((MyItemViewModel) viewModel);
             return binding;
         }
+        else if (viewModel instanceof MyTextItemViewModel) {
+            MyGridTextListitemBinding binding = (MyGridTextListitemBinding) inflate(R.layout.my_grid_text_listitem);
+            binding.setModel((MyTextItemViewModel) viewModel);
+            return binding;
+        }
         //else里支持多种item类型和样式，每种item数据对应一种样式
         return null;
     }
@@ -36,6 +44,8 @@ public class MyGridItemViewFactory extends ItemViewFactory<ItemViewBean> {
     protected Class<? extends AbsItemViewModel> getViewModelType(ItemViewBean item) {
         if (item instanceof MyItemViewBean) {
             return MyItemViewModel.class;
+        }else if(item instanceof MyTextItemViewBean){
+            return MyTextItemViewModel.class;
         }
         //else里支持多种item类型和样式，每种item数据对应一种样式
         return null;

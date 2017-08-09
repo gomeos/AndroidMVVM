@@ -63,13 +63,6 @@ dependencies {
 
     compile 'com.gomeos.activitystarter:activitystarter:1.0.0'
 
-    testCompile rootProject.ext.dependencies["assertj-core"]
-    testCompile rootProject.ext.dependencies["robolectric"]
-    testCompile rootProject.ext.dependencies["junit"]
-    testCompile rootProject.ext.dependencies["mockito"]
-    testCompile rootProject.ext.dependencies["hamcrest"]
-    testCompile rootProject.ext.dependencies["runner"]
-    testCompile rootProject.ext.dependencies["rules"]
 }
 
 

@@ -9,7 +9,7 @@ import com.gomeos.activitystarter.ActivityResultCallback;
 import com.gomeos.mvvm.viewmodel.LifecycleViewModel;
 import com.gomeos.mvvm.viewmodel.command.OnClickCommand;
 import com.gomeos.mvvm.viewmodel.proxy.DialogProxy;
-import com.mx.demo.view.ui.PulltoRefreshRecyclerViewActivity;
+import com.mx.demo.view.ui.SwipeRefreshActivity;
 import com.mx.demo.view.ui.RecyclerViewActivity;
 import com.mx.demo.view.ui.SecondActivity;
 import com.mx.demo.viewmodel.viewbean.ItemViewBean;
@@ -154,7 +154,7 @@ public class MainViewModel extends LifecycleViewModel {
         return new OnClickCommand() {
             @Override
             public void execute(int viewId) {
-                Intent intent = new Intent(getContext(), PulltoRefreshRecyclerViewActivity.class);
+                Intent intent = new Intent(getContext(), SwipeRefreshActivity.class);
                 startActivity(intent);
             }
         };

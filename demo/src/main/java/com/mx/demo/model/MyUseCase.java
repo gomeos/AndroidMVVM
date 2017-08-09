@@ -1,9 +1,11 @@
 package com.mx.demo.model;
 
-import com.gomeos.mvvm.utils.SubscriberResult;
 import com.gomeos.mvvm.event.EventProxy;
 import com.gomeos.mvvm.model.UseCase;
+import com.gomeos.mvvm.utils.SubscriberResult;
+import com.mx.demo.viewmodel.viewbean.ItemViewBean;
 import com.mx.demo.viewmodel.viewbean.MyItemViewBean;
+import com.mx.demo.viewmodel.viewbean.MyTextItemViewBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,11 +33,12 @@ public class MyUseCase extends UseCase {
 
 
 
-    public void getData(final SubscriberResult<List<MyItemViewBean>> subscriber){
-        List<MyItemViewBean>  data = new ArrayList<>();
+    public void getData(final SubscriberResult<List<ItemViewBean>> subscriber){
+        List<ItemViewBean>  data = new ArrayList<>();
         data.add(new MyItemViewBean("A"));
         data.add(new MyItemViewBean("B"));
         data.add(new MyItemViewBean("C"));
+        data.add(new MyTextItemViewBean("支持多种item样式"));
         data.add(new MyItemViewBean("D"));
         data.add(new MyItemViewBean("E"));
         data.add(new MyItemViewBean("F"));

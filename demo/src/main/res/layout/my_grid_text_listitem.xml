@@ -1,0 +1,24 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.mx.demo.viewmodel.MyTextItemViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="15dp"
+        android:onClick="@{model.clickCommand}"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/demo_listitem_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_red_dark"
+            android:gravity="center"
+            android:text="@{model.itemName}"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</layout>

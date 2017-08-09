@@ -8,7 +8,7 @@ import com.gomeos.mvvm.utils.SubscriberResult;
 import com.gomeos.mvvm.viewmodel.LifecycleViewModel;
 import com.mx.demo.event.MessageEvent;
 import com.mx.demo.model.MyUseCase;
-import com.mx.demo.viewmodel.viewbean.MyItemViewBean;
+import com.mx.demo.viewmodel.viewbean.ItemViewBean;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -22,7 +22,7 @@ import java.util.List;
 
 public class MyViewModel extends LifecycleViewModel {
     private MyUseCase myUseCase;
-    private List<MyItemViewBean> items = new LinkedList<>();
+    private List<ItemViewBean> items = new LinkedList<>();
 
 
     public boolean isRefreshing() {
@@ -31,7 +31,7 @@ public class MyViewModel extends LifecycleViewModel {
 
     private boolean refreshing = false;
 
-    public List<MyItemViewBean> getItems() {
+    public List<ItemViewBean> getItems() {
         return items;
     }
 
@@ -43,10 +43,10 @@ public class MyViewModel extends LifecycleViewModel {
     }
 
     private void getData() {
-        myUseCase.getData(new SubscriberResult<List<MyItemViewBean>>() {
+        myUseCase.getData(new SubscriberResult<List<ItemViewBean>>() {
             @Override
-            public void onSuccess(List<MyItemViewBean> myItemViewBeen) {
-                items.addAll(myItemViewBeen);
+            public void onSuccess(List<ItemViewBean> itemViewBeen) {
+                items.addAll(itemViewBeen);
                 notifyChange();
             }
 

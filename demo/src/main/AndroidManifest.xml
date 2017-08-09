@@ -30,7 +30,7 @@
         <activity android:name=".view.ui.SecondActivity"></activity>
 
         <activity android:name=".view.ui.RecyclerViewActivity" />
-        <activity android:name=".view.ui.PulltoRefreshRecyclerViewActivity" />
+        <activity android:name=".view.ui.SwipeRefreshActivity" />
 
     </application>
 

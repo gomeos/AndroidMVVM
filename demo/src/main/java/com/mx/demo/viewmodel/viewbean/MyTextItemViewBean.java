@@ -3,12 +3,16 @@ package com.mx.demo.viewmodel.viewbean;
 /**
  * Created by chenbaocheng on 16/8/14.
  */
-public class TextItemViewBean extends ItemViewBean {
+public class MyTextItemViewBean extends ItemViewBean {
     private String text = null;
     private boolean isUpperCase = false;
 
     public String getText() {
         return text;
+    }
+
+    public MyTextItemViewBean(String text) {
+        this.text = text;
     }
 
     public void setText(String text) {

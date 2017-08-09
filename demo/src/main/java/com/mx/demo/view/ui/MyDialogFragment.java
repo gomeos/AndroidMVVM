@@ -19,7 +19,7 @@ import com.gomeos.mvvm.view.ui.BaseDialogFragment;
 
 public class MyDialogFragment extends BaseDialogFragment {
     private Button btnOk;
-    private Button btnCancle;
+    private Button btnCancel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MyDialogFragment extends BaseDialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.gm_custom_dialog, container);
-        btnCancle = (Button) view.findViewById(R.id.negativeButton);
+        btnCancel = (Button) view.findViewById(R.id.negativeButton);
         btnOk = (Button) view.findViewById(R.id.positiveButton);
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +47,7 @@ public class MyDialogFragment extends BaseDialogFragment {
             }
         });
 
-        btnCancle.setOnClickListener(new View.OnClickListener() {
+        btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mOnBtnClickListener != null) {
