@@ -1,6 +1,13 @@
 # GomeOS MVVM
 GomeOS MVVM是一个基于MVVM思想架构，结合google databingding技术来设计的一个框架，用于日常app的开发，模块间设计严格按照迪米特法则，并具有良好的解耦设计。
 框架简化开发者adapter与recyclerview的数据繁琐创建，无需开发adapter，只需对列表中视图和数据进行绑定即可，大大提升开发效率。
+
+## 项目运行
+
+![demo](https://raw.githubusercontent.com/gomeos/AndroidMVVM/master/img/demo.png)
+
+[APK下载](https://github.com/gomeos/AndroidMVVM/raw/master/demo-debug.apk)
+
 ## 框架设计
 
 ![模块关系](https://github.com/gomeos/AndroidMVVM/blob/master/img/mvvm.png)</br>
