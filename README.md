@@ -4,7 +4,8 @@ GomeOS MVVM是一个基于MVVM思想架构，结合google databingding技术来�
 
 ## 项目运行
 
-![demo](https://raw.githubusercontent.com/gomeos/AndroidMVVM/master/img/demo.png)
+<img width="480" height="800" src="https://raw.githubusercontent.com/gomeos/AndroidMVVM/master/img/demo.png"/>
+
 
 [APK下载](https://github.com/gomeos/AndroidMVVM/raw/master/demo-debug.apk)
 
